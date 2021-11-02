@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+
+<head>
+    <script src="https://moment.github.io/luxon/global/luxon.min.js"></script>
+    <script src="script.js"></script>
+    <link rel="stylesheet" href="style.css">
+    <title>Jeu Betcha !</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <style>
+        body {
+            font-family: "Times New Roman", Georgia, Serif;
+        }
+
+        h1,
+        h2,
+        h3,
+        h4,
+        h5,
+        h6 {
+            font-family: "Playfair Display";
+            letter-spacing: 5px;
+        }
+        .flex-container {
+            display: flex;
+            flex-wrap: nowrap;
+            background-color: gray;
+        }
+
+        .flex-container > div {
+            background-color: #f1f1f1;
+            width: 100px;
+            margin: 10px;
+            text-align: center;
+            line-height: 75px;
+            font-size: 30px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- Navbar (sit on top) -->
+    <div class="w3-top">
+        <div class="w3-bar w3-white w3-padding w3-card" style="letter-spacing:4px;">
+            <input type=button class="w3-bar-item w3-button" onclick=window.location.href='/index.html' ;
+                value="Accueil" />
+            <!-- Right-sided navbar links. Hide them on small screens -->
+
+            <div class="w3-right w3-hide-small">
+                <input type=button class="w3-bar-item w3-button" onclick=window.location.href='/compte.html' ;
+                    value="Créer un compte" />
+                <input type=button class="w3-bar-item w3-button" onclick=window.location.href='/connexion.html' ;
+                    value="Se connecter" />
+                <input type=button class="w3-bar-item w3-button" onclick=window.location.href='/listePartie.html' ;
+                    value="Liste Partie" />
+                <form action="/deco" method="post">
+                    <input type=button class="w3-bar-item w3-button" name="deco" onclick=window.location.href='/logout'
+                        ; value="Deconnexion" />
+                </form>
+                <input type=button class="w3-bar-item w3-button" id="night" ; value="Mode nuit" />
+            </div>
+        </div>
+    </div>
+
+    <br><br><br><br><br>
+    <center>
+    <div>
+        <h2>Bonne Chance, QUE LE MEILLEUR GAGNE</h2>
+        <h3>Round 1 :</h3>
+    </div>
+    
+    <body>
+        <div class="flex-container">
+            <div>J1</div>
+            <div>X</div>
+            <div>X</div>
+            <div>X</div>
+            <div>X</div>
+            <div>LOT</div>
+            <div>X</div>
+            <div>X</div>
+            <div>X</div>
+            <div>X</div>
+            <div>J2</div>
+          </div>
+        <button type="button" id="quiterPartie"  onclick=window.location.href='/listePartie'>Quitter la partie</button>
+
+    </body>
+</center>
+
+</html>

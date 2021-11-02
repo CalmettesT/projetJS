@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <link rel="stylesheet" href="style.css">
+  <title>Jeu Betcha !</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+  <style>
+    body {
+      font-family: "Times New Roman", Georgia, Serif;
+    }
+
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6 {
+      font-family: "Playfair Display";
+      letter-spacing: 4px;
+    }
+
+    label {
+      font-family: "Playfair Display";
+    }
+  </style>
+  <script src="script.js"></script>
+</head>
+
+<body>
+
+  <!-- Navbar (sit on top) -->
+  <div class="w3-top">
+    <div class="w3-bar w3-white w3-padding w3-card" style="letter-spacing:4px;">
+      <input type=button class="w3-bar-item w3-button" onclick=window.location.href='index.html' ; value="Accueil" />
+      <!-- Right-sided navbar links. Hide them on small screens -->
+      <div class="w3-right w3-hide-small">
+        <input type=button class="w3-bar-item w3-button" onclick=window.location.href='compte.html' ;
+          value="Créer un compte" />
+        <input type=button class="w3-bar-item w3-button" onclick=window.location.href='connexion.html' ;
+          value="Se connecter" />
+        <input type=button class="w3-bar-item w3-button" onclick=window.location.href='/listePartie' ;
+          value="Liste Partie" />
+        <input type=button class="w3-bar-item w3-button" name="deco" onclick=window.location.href='/logout' ;
+          value="Deconnexion" />
+        <input type=button class="w3-bar-item w3-button" id="night" ; value="Mode nuit" />
+      </div>
+    </div>
+  </div>
+  <div>
+    <center>
+      <br><br><br>
+      <h1>Regle du Jeu</h1>
+      <label>11 emplacements contigus séparent deux joueurs:<br>
+        le 1er emplacement est celui du 1er joueur, le 11eme celui de l'autre.<br>
+        un lot est placé sur le 6eme emplacement (au milieu).<br>
+        chaque joueur possède initialement 100 jetons.<br>
+
+        Chaque joueur mise en secret un certain nombre de jetons (entre 0 et 100).<br>
+        si le joueur ne mise pas après 30 secondes, un pari aléatoire (valide) est généré par le serveur.<br>
+
+        On révèle alors les mises:<br>
+        Celui qui a misé le plus se voit retirer le montant de sa mise de ses jetons, mais voit le lot avancer d'un cran
+        dans sa direction.<br>
+        Par contre le joueur qui n'a pas remporté le pari garde sa mise et ne perd aucun jeton.<br>
+        Les joueurs continuent à parier jusqu'à que :<br>
+        - le lot arrive sur l'emplacement d'un des joueurs<br>
+        - ou que les deux joueurs n'aient plus de jetons<br>
+        - ou après 20 paris maximum<br>
+        Si le lot arrive sur l'emplacement d'un joueur, ce joueur remporte le lot!</label>
+  </div>
+  </center>
+  <div>
+    <br><br><br><img src="Bg-02.png" alt="imageJeu">
+  </div>
+</body>
+
+</html>

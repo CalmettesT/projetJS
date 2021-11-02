@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <script src="https://moment.github.io/luxon/global/luxon.min.js"></script>
+    <script src="script.js"></script>
+    <script src="liste.js"></script>
+    <link rel="stylesheet" href="style.css">
+    <title>Jeu Betcha !</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <style>
+        body {
+            font-family: "Times New Roman", Georgia, Serif;
+        }
+
+        h1,
+        h2,
+        h3,
+        h4,
+        h5,
+        h6 {
+            font-family: "Playfair Display";
+            letter-spacing: 5px;
+        }
+        button {
+            background-color: white;
+            color: black;
+            border: 2px solid black; 
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- Navbar (sit on top) -->
+    <div class="w3-top">
+        <div class="w3-bar w3-white w3-padding w3-card" style="letter-spacing:4px;">
+            <input type=button class="w3-bar-item w3-button" onclick=window.location.href='/index.html' ;
+                value="Accueil" />
+            <!-- Right-sided navbar links. Hide them on small screens -->
+
+            <div class="w3-right w3-hide-small">
+                <input type=button class="w3-bar-item w3-button" onclick=window.location.href='/compte.html' ;
+                    value="Créer un compte" />
+                <input type=button class="w3-bar-item w3-button" onclick=window.location.href='/connexion.html' ;
+                    value="Se connecter" />
+                <input type=button class="w3-bar-item w3-button" onclick=window.location.href='/listePartie.html' ;
+                    value="Liste Partie" />
+                <form action="/deco" method="post">
+                    <input type=button class="w3-bar-item w3-button" name="deco" onclick=window.location.href='/logout'
+                        ; value="Deconnexion" />
+                </form>
+                <input type=button class="w3-bar-item w3-button" id="night" ; value="Mode nuit" />
+            </div>
+        </div>
+    </div>
+    
+    <form action="/newParties" method="post">
+        <center>
+
+            <div class="form-group">
+                <label for="nomPartie"><br><br><br><br><br>Nom de la Partie</label>
+                <input type="nomPartie" class="NP" id="NP" name="nomDesParties" placeholder="Nom de la partie">
+            </div>
+
+            <div class="form-group">
+                <label for="nomJ1">Votre Nom</label>
+                <input type="votrePseudo" class="form-control" id="votrePseudo" name="votrePseudo"
+                    placeholder="Entrer votre pseudo">
+            </div>
+
+            <div class="form-group">
+                <label for="nomAD">Nom de l'advresaire</label>
+                <input type="pseudoAd" class="form-control" id="pseudoAd" name="pseudoAd"
+                    placeholder="Entrer le pseudo adversse">
+            </div>
+
+            <button type="submit" name="Valider" class="btn btn-primary">Valider</button>
+
+        </center>
+        <br><br>
+    </form>
+    <ul class="listePartie"></ul>
+    <div>
+        <br><br><br><img src="Bg-02.png" alt="imageJeu">
+    </div>
+
+</body>
+
+</html>

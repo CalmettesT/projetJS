@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <script src="script.js"></script>
+    <link rel="stylesheet" href="style.css">
+    <title>Jeu Betcha !</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <style>
+        body {
+            font-family: "Times New Roman", Georgia, Serif;
+            /* background-image: url(/imgfond.jpg); */
+        }
+
+        h1,
+        h2 {
+            font-family: "Playfair Display";
+            letter-spacing: 5px;
+        }
+
+        /* div {
+
+            background-attachment: fixed;
+            width: 100%;
+            max-height: 100%;
+            height: 50%;
+        } */
+    </style>
+</head>
+
+<body>
+    <div class="w3-top">
+        <div class="w3-bar w3-white w3-padding w3-card" style="letter-spacing:4px;">
+            <input type=button class="w3-bar-item w3-button" onclick=window.location.href='index.html' ;
+                value="Accueil" />
+            <!-- Right-sided navbar links. Hide them on small screens -->
+            <div class="w3-right w3-hide-small">
+                <input type=button class="w3-bar-item w3-button" onclick=window.location.href='compte.html' ;
+                    value="Créer un compte" />
+                <input type=button class="w3-bar-item w3-button" onclick=window.location.href='connexion.html' ;
+                    value="Se connecter" />
+                <input type=button class="w3-bar-item w3-button" onclick=window.location.href='/listePartie' ;
+                    value="Liste Partie" />
+                <input type=button class="w3-bar-item w3-button" name="deco" onclick=window.location.href='/logout' ;
+                    value="Deconnexion" />
+                <input type=button class="w3-bar-item w3-button" id="night" ; value="Mode nuit" />
+            </div>
+        </div>
+    </div>
+
+
+    <!-- Créer un compte Section -->
+    <center>
+        <form action="/users" method="post">
+            <div class="form-group">
+                <label for="nom user"><br><br><br><br>Pseudo</label>
+                <input type="pseudo" class="form-control" id="pseudo" requiere="" name="pseudo"
+                    placeholder="Entrer votre pseudo">
+            </div>
+            <div class="form-group">
+                <label for="mdp">Mot de passe</label>
+                <input type="password" class="mdp" id="mdp" name="password" placeholder="Mot de passe">
+            </div>
+            <button type="submit" class="btn btn-primary">Valider</button>
+        </form>
+    </center>
+</body>
+
+</html>
