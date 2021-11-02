@@ -29,48 +29,49 @@
 
     <!-- Navbar (sit on top) -->
     <div class="w3-top">
-        <div class="w3-bar w3-white w3-padding w3-card" style="letter-spacing:4px;">
-            <input type=button class="w3-bar-item w3-button" onclick=window.location.href='index.html' ;
+        <div class="w3-bar w3-white w3-padding w3-card" style="letter-spacing: 4px">
+            <input type="button" class="w3-bar-item w3-button" onclick="window.location.href='/index.html' ;"
                 value="Accueil" />
             <!-- Right-sided navbar links. Hide them on small screens -->
 
             <div class="w3-right w3-hide-small">
-                <input type=button class="w3-bar-item w3-button" onclick=window.location.href='compte.html' ;
+                <input type="button" class="w3-bar-item w3-button" onclick="window.location.href='/compte.html' ;"
                     value="Créer un compte" />
-                <input type=button class="w3-bar-item w3-button" onclick=window.location.href='connexion.html' ;
+                <input type="button" class="w3-bar-item w3-button" onclick="window.location.href='/connexion.html' ;"
                     value="Se connecter" />
-                <input type=button class="w3-bar-item w3-button" onclick=window.location.href='/listePartie' ;
+                <input type="button" class="w3-bar-item w3-button" onclick="window.location.href='/listePartie' ;"
                     value="Liste Partie" />
                 <form action="/deco" method="post">
-                    <input type=button class="w3-bar-item w3-button" name="deco"
-                        onclick=window.location.href='index.html' ; value="Deconnexion" />
+                    <input type="button" class="w3-bar-item w3-button" name="deco"
+                        onclick="window.location.href='/logout' ;" value="Deconnexion" />
                 </form>
-                <input type=button class="w3-bar-item w3-button" id="night" ; value="Mode nuit" />
+                <input type="button" class="w3-bar-item w3-button" id="night" value="Mode nuit" />
             </div>
         </div>
     </div>
+    <br />
     <center>
         <br><br><br><br>
         <h1>Vous n'etes pas co</h1>
         <form action="/newParties" method="post">
-        <div class="form-group">
-            <label for="nomPartie">Nom de la Partie</label>
-            <input type="nomPartie" class="NP" id="NP" name="nomDesParties" placeholder="Nom de la partie">
-        </div>
+            <div class="form-group">
+                <label for="nomPartie">Nom de la Partie</label>
+                <input type="nomPartie" class="NP" id="NP" name="nomDesParties" placeholder="Nom de la partie">
+            </div>
 
-        <div class="form-group">
-            <label for="nomJ1">Votre Nom</label>
-            <input type="votrePseudo" class="form-control" id="votrePseudo" name="votrePseudo"
-                placeholder="Entrer votre pseudo">
-        </div>
+            <div class="form-group">
+                <label for="nomJ1">Votre Nom</label>
+                <input type="votrePseudo" class="form-control" id="votrePseudo" name="votrePseudo"
+                    placeholder="Entrer votre pseudo">
+            </div>
 
-        <div class="form-group">
-            <label for="nomAD">Nom de l'advresaire</label>
-            <input type="pseudoAd" class="form-control" id="pseudoAd" name="pseudoAd"
-                placeholder="Entrer le pseudo adversse">
-        </div>
+            <div class="form-group">
+                <label for="nomAD">Nom de l'advresaire</label>
+                <input type="pseudoAd" class="form-control" id="pseudoAd" name="pseudoAd"
+                    placeholder="Entrer le pseudo adversse">
+            </div>
 
-        <button type="submit" class="btn btn-primary">Valider</button>
+            <button type="submit" class="btn btn-primary">Valider</button>
         </form>
     </center>
 

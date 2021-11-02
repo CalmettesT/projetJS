@@ -2,65 +2,69 @@
 <html>
 
 <head>
-    <script src="script.js"></script>
-    <link rel="stylesheet" href="style.css">
-    <title>Jeu Betcha !</title>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
-    <style>
-        body {
-            font-family: "Times New Roman", Georgia, Serif;
-        }
+  <script src="script.js"></script>
+  <link rel="stylesheet" href="style.css" />
+  <title>Jeu Betcha !</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css" />
+  <style>
+    body {
+      font-family: "Times New Roman", Georgia, Serif;
+    }
 
-        h1,
-        h2,
-        h3,
-        h4,
-        h5,
-        h6 {
-            font-family: "Playfair Display";
-            letter-spacing: 5px;
-        }
-    </style>
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6 {
+      font-family: "Playfair Display";
+      letter-spacing: 5px;
+    }
+  </style>
 </head>
 
 <body>
+  <!-- Navbar (sit on top) -->
+  <div class="w3-top">
+    <div class="w3-bar w3-white w3-padding w3-card" style="letter-spacing: 4px">
+      <input type="button" class="w3-bar-item w3-button" onclick="window.location.href='/index.html' ;"
+        value="Accueil" />
+      <!-- Right-sided navbar links. Hide them on small screens -->
 
-    <!-- Navbar (sit on top) -->
-    <div class="w3-top">
-        <div class="w3-bar w3-white w3-padding w3-card" style="letter-spacing:4px;">
-            <input type=button class="w3-bar-item w3-button" onclick=window.location.href='index.html' ;
-                value="Accueil" />
-            <!-- Right-sided navbar links. Hide them on small screens -->
-            <div class="w3-right w3-hide-small">
-                <input type=button class="w3-bar-item w3-button" onclick=window.location.href='compte.html' ;
-                    value="Créer un compte" />
-                <input type=button class="w3-bar-item w3-button" onclick=window.location.href='connexion.html' ;
-                    value="Se connecter" />
-                <input type=button class="w3-bar-item w3-button" onclick=window.location.href='/listePartie' ;
-                    value="Liste Partie" />
-                <input type=button class="w3-bar-item w3-button" name="deco" onclick=window.location.href='/logout' ;
-                    value="Deconnexion" />
-                <input type=button class="w3-bar-item w3-button" id="night" ; value="Mode nuit" />
-            </div>
-        </div>
-    </div>
-
-    <center>
-        <form action="/usersConnexion" method="post">
-            <div class="form-group">
-                <label for="exampleInputEmail1"><br><br><br><br>Pseudo</label>
-                <input type="pseudo" class="form-control" id="pseudo" name="pseudoCo" placeholder="Entrer votre pseudo">
-            </div>
-            <div class="form-group">
-                <label for="exampleInputPassword1">Mot de passe</label>
-                <input type="password" class="mdp" id="mdp" name="passwordCo" placeholder="Mot de passe">
-            </div>
-            <button type="submit" class="btn btn-primary">Valider</button>
+      <div class="w3-right w3-hide-small">
+        <input type="button" class="w3-bar-item w3-button" onclick="window.location.href='/compte.html' ;"
+          value="Créer un compte" />
+        <input type="button" class="w3-bar-item w3-button" onclick="window.location.href='/connexion.html' ;"
+          value="Se connecter" />
+        <input type="button" class="w3-bar-item w3-button" onclick="window.location.href='/listePartie' ;"
+          value="Liste Partie" />
+        <form action="/deco" method="post">
+          <input type="button" class="w3-bar-item w3-button" name="deco" onclick="window.location.href='/logout' ;"
+            value="Deconnexion" />
         </form>
-    </center>
+        <input type="button" class="w3-bar-item w3-button" id="night" value="Mode nuit" />
+      </div>
+    </div>
+  </div>
+  <br />
 
+  <center>
+    <br /><br /><br />
+    <h2>Veuillez vous connecter</h2>
+    <form action="/usersConnexion" method="post">
+      <div class="form-group">
+        <label for="exampleInputEmail1"><br /><br /><br /><br />Pseudo</label>
+        <input type="pseudo" class="form-control" id="pseudo" name="pseudoCo" placeholder="Entrer votre pseudo" />
+      </div>
+      <div class="form-group">
+        <label for="exampleInputPassword1">Mot de passe</label>
+        <input type="password" class="mdp" id="mdp" name="passwordCo" placeholder="Mot de passe" />
+      </div>
+      <button type="submit" class="btn btn-primary">Valider</button>
+    </form>
+  </center>
 </body>
 
 </html>

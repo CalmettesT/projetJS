@@ -24,13 +24,14 @@
             font-family: "Playfair Display";
             letter-spacing: 5px;
         }
+
         .flex-container {
             display: flex;
             flex-wrap: nowrap;
             background-color: gray;
         }
 
-        .flex-container > div {
+        .flex-container>div {
             background-color: #f1f1f1;
             width: 100px;
             margin: 10px;
@@ -55,41 +56,46 @@
                     value="Créer un compte" />
                 <input type=button class="w3-bar-item w3-button" onclick=window.location.href='/connexion.html' ;
                     value="Se connecter" />
-                <input type=button class="w3-bar-item w3-button" onclick=window.location.href='/listePartie.html' ;
+                <input type=button class="w3-bar-item w3-button" onclick=window.location.href='/listePartie' ;
                     value="Liste Partie" />
                 <form action="/deco" method="post">
                     <input type=button class="w3-bar-item w3-button" name="deco" onclick=window.location.href='/logout'
                         ; value="Deconnexion" />
                 </form>
-                <input type=button class="w3-bar-item w3-button" id="night" ; value="Mode nuit" />
+                <input type=button class="w3-bar-item w3-button" id="night" value="Mode nuit" />
             </div>
         </div>
     </div>
 
     <br><br><br><br><br>
     <center>
-    <div>
-        <h2>Bonne Chance, QUE LE MEILLEUR GAGNE</h2>
-        <h3>Round 1 :</h3>
-    </div>
-    
-    <body>
-        <div class="flex-container">
-            <div>J1</div>
-            <div>X</div>
-            <div>X</div>
-            <div>X</div>
-            <div>X</div>
-            <div>LOT</div>
-            <div>X</div>
-            <div>X</div>
-            <div>X</div>
-            <div>X</div>
-            <div>J2</div>
-          </div>
-        <button type="button" id="quiterPartie"  onclick=window.location.href='/listePartie'>Quitter la partie</button>
+        <div>
+            <h2>Bonne Chance, QUE LE MEILLEUR GAGNE</h2>
+            <h3>Round 1 :</h3>
+        </div>
 
-    </body>
-</center>
+        <body>
+            <div class="flex-container">
+
+                <div>J1</div>
+                <div>X</div>
+                <div>X</div>
+                <div>X</div>
+                <div>X</div>
+                <div>LOT</div>
+                <div>X</div>
+                <div>X</div>
+                <div>X</div>
+                <div>X</div>
+                <div>J2</div>
+
+            </div>
+            <input type="mise" class="form-control" id="mise" name="mise" placeholder="Entrer votre mise"><br>
+            <button type="button" id="mise">Valider la mise</button><br><br>
+            <button type="button" id="quiterPartie" onclick=window.location.href='/listePartie'>Quitter la
+                partie</button>
+
+        </body>
+    </center>
 
 </html>
